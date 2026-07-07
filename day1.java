@@ -5,15 +5,11 @@ public class day1 {
     public static int maxSum(int[] arr, int k) {
 
         int windowSum = 0;
-
-        // Calculate first window sum
         for (int i = 0; i < k; i++) {
             windowSum += arr[i];
         }
 
         int maxSum = windowSum;
-
-        // Slide the window
         for (int j = k; j < arr.length; j++) {
             windowSum += arr[j];
             windowSum -= arr[j - k];
