@@ -2,6 +2,7 @@
 class Node{
     int data;
     Node next;
+    Node head;
 
     Node(int data){
         this.data =data;
@@ -18,16 +19,20 @@ public class day9{
 
     public static void main(String[] args){
 
+
         Node n1 = new Node(10);
+        
        
 
         Node n2 = new Node(20);
       
 
         n1.next = n2;
+        Node head = n1;
 
         System.out.println(n1.data);
         System.out.println(n1.next.data);
+        System.out.println(head.data);
         
         
         // LinkedList<String> l = new LinkedList<String>();
